@@ -5,9 +5,45 @@
   --roboto: 'Roboto', sans-serif;
 }
 
+header {
+  position: relative;
+}
+
 .background {
+  position: absolute;
   width: 100%;
   height: 650px;
-  background-color: #0891B2;
+  background-color: #0891b2;
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 47% 70%, 0 100%);
+}
+
+.header-wrapper {
+  position: absolute;
+  padding: 4vw 0 0 5vw;
+}
+
+.header-image {
+  position: relative;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+}
+
+.header-image img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.header-image h1 {
+  font-family: var(--playfair);
+  font-weight: normal;
+  font-size: 6.5rem;
+  color: white;
+  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.288);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2%;
 }
