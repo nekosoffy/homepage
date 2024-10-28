@@ -1,3 +1,6 @@
-body {
-  color: red;
+@import url(https://fonts.bunny.net/css?family=playfair-display:400|roboto:400);
+
+:root {
+  --playfair: 'Playfair Display', serif;
+  --roboto: 'Roboto', sans-serif;
 }
