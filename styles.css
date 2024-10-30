@@ -3,39 +3,40 @@
 :root {
   --playfair: 'Playfair Display', serif;
   --roboto: 'Roboto', sans-serif;
-  --h1-size: 6.5rem;
+  --h1-size: calc(0.5rem + 5cqw);
   --h2-size: 5.5rem;
   --p-size: calc(1rem + 1vw);
 }
 
 header {
   position: relative;
-  width: 100%;
   height: 100vh;
 }
 
 .background {
   position: absolute;
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-color: #0891b2;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 47% 70%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 47% 70%, 0 min(100%, 70vw));
   object-fit: cover;
+}
+
+.background-wrap {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .header-wrapper {
   position: absolute;
-  display: grid;
-  grid-template-columns: max-content 1fr;
+  display: flex;
   margin: 5vw;
 }
 
 .header-image {
   position: relative;
   text-align: center;
-  max-width: 40vw;
+  max-width: 45%;
   max-height: 80vh;
-  aspect-ratio: 1 / 1.1;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.377);
 }
 
@@ -59,19 +60,21 @@ header {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
   overflow: auto;
   background-color: white;
   padding: 50px;
-  height: 80%;
+  height: 65vh;
   align-self: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.377);
-  overflow-y: auto;
 }
 
 .about h2 {
   font-size: var(--h2-size);
   font-weight: normal;
   font-family: var(--playfair);
+  margin-bottom: 4rem;
 }
 
 .about p {
@@ -80,6 +83,14 @@ header {
   color: rgb(105, 105, 105);
 }
 
+.icon-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: auto;
+  margin-left: auto;
+}
+
 .about img {
-  width: 50px;
+  width: 40px;
+  cursor: pointer;
 }
