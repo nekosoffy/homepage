@@ -4,7 +4,7 @@
   --playfair: 'Playfair Display', serif;
   --roboto: 'Roboto', sans-serif;
   --h1-size: calc(0.5rem + 5cqw);
-  --h2-size: 5.5rem;
+  --h2-size: calc(4rem + 1vw);
   --p-size: calc(1rem + 1vw);
 }
 
@@ -92,5 +92,4 @@ header {
 
 .about img {
   width: 40px;
-  cursor: pointer;
 }
