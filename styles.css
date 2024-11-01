@@ -8,6 +8,7 @@
   --h3-size: calc(2.5rem + 0.3vw);
   --description-size: calc(1.8rem + 0.3vw);
   --about-size: calc(1rem + 1vw);
+  --address-size: calc(1rem + 0.8vw);
   --screenshot-size: calc(3.8rem + 1vw);
 }
 
@@ -24,37 +25,41 @@ h3 {
 
 header {
   position: relative;
-  height: max(100vh, 700px);
+  height: 100vh;
+}
+
+.background,
+footer {
+  background-color: #0891b2;
 }
 
 .background {
   position: absolute;
   width: 100%;
-  height: 100vh;
-  background-color: #0891b2;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 47% 70%, 0 min(100%, 70vw));
+  height: 100%;
+  clip-path: polygon(100vw 0, 100vw 53vh, 53vw 75vh, 0 100vh, 0 0);
   object-fit: cover;
 }
 
 .background-wrap {
-  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-}
-
-.header-wrapper,
-main {
-  margin: 5vw;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.452));
+  height: 100%;
 }
 
 .header-wrapper {
+  margin: 5vw;
   position: absolute;
   display: flex;
+  justify-content: center;
+  top: 0;
+  height: 80vh;
 }
 
 .header-image {
   position: relative;
   text-align: center;
-  max-width: 47%;
-  max-height: 80vh;
+  height: 100%;
+  width: 47%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.377);
 }
 
@@ -113,6 +118,10 @@ main {
 
 .about img {
   width: 40px;
+}
+
+main {
+  margin: 5vw;
 }
 
 main h2 {
@@ -200,4 +209,70 @@ main h2 {
 
 .blue {
   background-color: rgb(75, 162, 210);
+}
+
+footer {
+  display: flex;
+  padding: 5vw;
+  color: white;
+}
+
+footer p {
+  width: 80%;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer p,
+footer address {
+  font-family: var(--roboto);
+  font-size: var(--address-size);
+}
+
+footer h2,
+footer p {
+  margin-bottom: 3rem;
+}
+
+.footer-image {
+  background-image: url('./images/image2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+  aspect-ratio: 1/0.6;
+  border-radius: 5px;
+}
+
+address > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+address > div:first-of-type {
+  margin-top: 3rem;
+}
+
+address img {
+  width: 30px;
+}
+
+footer .icon-wrapper {
+  margin-top: 3rem;
+}
+
+footer .icon-wrapper img {
+  width: 40px;
+}
+
+@media (max-width: 1500px) {
+  header {
+    height: 93vh;
+  }
+
+  .background {
+    clip-path: polygon(100vw 0, 100vw 50vh, 53vw 70vh, 0 93vh, 0 0);
+  }
 }
