@@ -392,4 +392,15 @@ footer .icon-wrapper img {
     text-align: left;
     margin-left: 5%;
   }
+
+  header {
+    position: relative;
+    padding: 5vw 5vw 0;
+    background: linear-gradient(
+      150.5deg,
+      #0891b2 40.5%,
+      #c7c7c6 41%,
+      #ffffff 42%
+    );
+  }
 }
